@@ -51,6 +51,15 @@
   border-radius: 3px;
   color: white;
   border: 1px solid #4472c4;
+  cursor: pointer;
+}
+
+/* searchbar */
+.search-bar {
+  border: 3px solid #82c9e9;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
 }
 
 /* a {
