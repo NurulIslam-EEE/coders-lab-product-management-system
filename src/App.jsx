@@ -1,21 +1,24 @@
+import { useEffect } from "react";
 import Button from "./components/ui/Button";
 import CustomSearchBar from "./components/ui/CustomSearchBar";
 import Navigation from "./components/ui/Navigation";
+import { useGetProductsQuery } from "./redux/api/apiSlice";
+
+import dataJson from "./utils/data.json";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const handleClick = () => {
-    console.log("clicked");
-  };
+  useEffect(() => {
+    // console.log("ddd", dataJson);
+  }, []);
 
-  const handleChange = (e) => {
-    console.log("clicked", e.target.value);
-  };
+  const { data, isLoading, error } = useGetProductsQuery();
+  // console.log("dddd", data, error, isLoading);
   return (
-    <div className="container">
+    <div className="">
       <Navigation />
-      <Button title="Create" onClick={handleClick} />
 
-      <CustomSearchBar onChange={handleChange} />
+      <Outlet />
     </div>
   );
 }

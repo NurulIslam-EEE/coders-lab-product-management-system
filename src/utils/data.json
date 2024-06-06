@@ -1,0 +1,1012 @@
+[
+    {
+        "id": 992,
+        "name": "Rusty",
+        "brand": "Strosin-Kuhic",
+        "type": "Plate",
+        "origin": "Lesotho",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9911,
+                "product_id": 992,
+                "color": "DarkSalmon",
+                "specification": "Id explicabo ipsum omnis dolorem cupiditate in eos odit. Quae et quidem non ut eum. Incidunt id molestiae expedita nisi cumque ullam.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9912,
+                "product_id": 992,
+                "color": "SkyBlue",
+                "specification": "Enim voluptatem ipsum sed explicabo dolor consequuntur. Qui ut est eveniet eius alias vel eligendi. Atque omnis ducimus doloribus dolorem.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9913,
+                "product_id": 992,
+                "color": "Coral",
+                "specification": "Omnis voluptatibus vel ipsum dicta quo. Error a quos praesentium est perferendis quia dolores. Voluptates corporis dolorem maxime non non est doloribus facilis.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9914,
+                "product_id": 992,
+                "color": "LightYellow",
+                "specification": "Voluptate facilis rem id. Quasi quia doloremque dolorum magni veniam qui sint eius. Explicabo dignissimos natus aliquid quo aut eos eveniet.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9915,
+                "product_id": 992,
+                "color": "Fuchsia",
+                "specification": "Necessitatibus fuga et omnis sit quia beatae esse. Ratione quidem incidunt ea quos. Non id ea ut dignissimos.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9916,
+                "product_id": 992,
+                "color": "Violet",
+                "specification": "Vitae placeat sed rem. Aperiam expedita magni nihil ut dolores quos. Velit reiciendis officia autem.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9917,
+                "product_id": 992,
+                "color": "PaleTurquoise",
+                "specification": "Quo aperiam aut libero dolorem aliquid quisquam libero quo. Explicabo itaque voluptatum voluptatem qui. Impedit sit accusantium nam quia neque sed voluptatum.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9918,
+                "product_id": 992,
+                "color": "LightYellow",
+                "specification": "Fugit ut ut autem eaque eius quos. Sit maxime voluptatem illo nemo quaerat necessitatibus. Voluptatibus commodi recusandae nulla accusamus nisi inventore.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9919,
+                "product_id": 992,
+                "color": "LightPink",
+                "specification": "Iure fugiat et ducimus non vitae. Et eaque nihil sed molestiae voluptatem et velit dolores. Ut omnis sint ex nihil quaerat laudantium vitae.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9920,
+                "product_id": 992,
+                "color": "Pink",
+                "specification": "Et corrupti occaecati qui culpa quos incidunt ut eius. Sunt dolorem quam vel sed quis. Error corrupti dolores voluptatem dolores non commodi quisquam.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 993,
+        "name": "Astrid",
+        "brand": "Beatty-Rippin",
+        "type": "Mug",
+        "origin": "Anguilla",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9921,
+                "product_id": 993,
+                "color": "Darkorange",
+                "specification": "Nemo placeat vel porro exercitationem numquam et modi repellat. Eligendi reprehenderit magni incidunt fugiat impedit. Quia esse aliquam optio nihil nemo ut porro.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9922,
+                "product_id": 993,
+                "color": "White",
+                "specification": "Nostrum ducimus aperiam aut in voluptatem iure omnis. Sit quisquam quidem in beatae aut illum sequi possimus. Earum velit mollitia a molestiae vel.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9923,
+                "product_id": 993,
+                "color": "DarkGoldenRod",
+                "specification": "Nostrum est tempora perferendis quibusdam iusto. Voluptatibus tempore et et sunt. Dicta modi quaerat in corrupti architecto perspiciatis.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9924,
+                "product_id": 993,
+                "color": "BurlyWood",
+                "specification": "Ipsam explicabo maiores molestiae consectetur provident expedita labore a. Expedita mollitia porro expedita eveniet enim veritatis enim. Suscipit et temporibus ab molestiae enim.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9925,
+                "product_id": 993,
+                "color": "Lavender",
+                "specification": "Ea nulla nostrum tempora. Dolor ipsam nostrum porro alias hic optio nobis voluptatum. Ea ipsum rerum voluptatem est rem.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9926,
+                "product_id": 993,
+                "color": "MidnightBlue",
+                "specification": "Inventore quas molestiae ea quia molestiae. Enim vitae aut voluptatem quasi. Expedita assumenda dicta assumenda vel nam accusantium.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9927,
+                "product_id": 993,
+                "color": "CadetBlue",
+                "specification": "Qui officia aut reprehenderit natus ratione odio. Quaerat aut rerum aut voluptas error illo aliquam. Voluptatem aut est voluptatem ab libero.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9928,
+                "product_id": 993,
+                "color": "Navy",
+                "specification": "Corporis explicabo ea culpa beatae et soluta. Corrupti sint necessitatibus quisquam velit. Officiis sunt mollitia nostrum possimus.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9929,
+                "product_id": 993,
+                "color": "LightGray",
+                "specification": "Facere sit magnam expedita illo. Et quo delectus cum temporibus voluptates quasi quis et. Voluptas optio molestiae nulla consequatur.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9930,
+                "product_id": 993,
+                "color": "MidnightBlue",
+                "specification": "Ullam magnam aperiam aspernatur laudantium voluptatem. Hic laudantium officiis architecto sit distinctio. Adipisci sunt assumenda fuga totam.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 994,
+        "name": "Dereck",
+        "brand": "Wiza-Farrell",
+        "type": "Mug",
+        "origin": "Myanmar",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9931,
+                "product_id": 994,
+                "color": "Salmon",
+                "specification": "Est commodi maxime vero ducimus aut sint. Eum est iusto nihil possimus eos. Quaerat sint veniam quia ad ipsam aut voluptatem.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9932,
+                "product_id": 994,
+                "color": "SlateGray",
+                "specification": "Repudiandae perspiciatis quidem tempore consequuntur doloremque sed molestias. A aut et debitis maiores fugit harum. Quia provident quis quo deleniti.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9933,
+                "product_id": 994,
+                "color": "DarkBlue",
+                "specification": "Enim ipsum laboriosam corrupti adipisci. Similique doloribus quia sit quae iste porro quis. Sit at omnis similique voluptatem architecto libero veritatis quisquam.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9934,
+                "product_id": 994,
+                "color": "Blue",
+                "specification": "Nam sit aut dignissimos. Consequuntur quia modi ab eum ea ducimus enim. Quos eos laboriosam sit consequatur.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9935,
+                "product_id": 994,
+                "color": "Sienna",
+                "specification": "Et voluptatem nostrum similique non repudiandae dicta hic. Quae magni amet est reprehenderit et. Sed cum illum eum beatae necessitatibus.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9936,
+                "product_id": 994,
+                "color": "GhostWhite",
+                "specification": "Nam voluptate illum sunt quae. Et atque molestias possimus cumque et aut. Harum eveniet explicabo deserunt sapiente inventore molestiae eaque.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9937,
+                "product_id": 994,
+                "color": "DarkGreen",
+                "specification": "Architecto mollitia esse aut architecto soluta. Ut unde eos asperiores sed et vero. Perferendis sint iusto voluptas quasi nisi.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9938,
+                "product_id": 994,
+                "color": "PowderBlue",
+                "specification": "Ut quia quibusdam est placeat. Voluptatem voluptates excepturi possimus qui. Aperiam ipsa qui veritatis dolorum.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9939,
+                "product_id": 994,
+                "color": "PeachPuff",
+                "specification": "Dolorem placeat sit perspiciatis inventore et. Est sit numquam nesciunt ipsam eligendi. Similique qui veniam tenetur.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9940,
+                "product_id": 994,
+                "color": "DarkGreen",
+                "specification": "Fugit aut rerum itaque dolor est veritatis. Vel nobis dolore dolor molestiae adipisci. Sint dolor qui quos harum similique.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 995,
+        "name": "Janae",
+        "brand": "Wisoky-Dicki",
+        "type": "Cup",
+        "origin": "Portugal",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9941,
+                "product_id": 995,
+                "color": "AliceBlue",
+                "specification": "Sapiente illo omnis sequi iusto consectetur. Sequi ut molestias excepturi aperiam dolorem. Illo sint distinctio autem aut.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9942,
+                "product_id": 995,
+                "color": "MediumBlue",
+                "specification": "Est in maiores dolor dolorem suscipit. Aspernatur et molestias sed repellat unde. Voluptates in alias qui quos.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9943,
+                "product_id": 995,
+                "color": "DarkSlateBlue",
+                "specification": "Eum est sint rerum nulla repellendus vero. Blanditiis eveniet et vel error soluta architecto. Ut officia eius sunt.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9944,
+                "product_id": 995,
+                "color": "Blue",
+                "specification": "Qui cupiditate enim aperiam eaque tenetur officiis. Et ut sed provident laboriosam. Eos officia fugit omnis esse dicta natus eius.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9945,
+                "product_id": 995,
+                "color": "ForestGreen",
+                "specification": "Facere nobis facere aut amet est. Adipisci ea et fugit et unde illo beatae. Omnis optio accusamus autem libero at.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9946,
+                "product_id": 995,
+                "color": "LightCoral",
+                "specification": "Ut corporis qui error. Voluptates tempore quae ut accusantium aut. Rerum asperiores aliquid sequi nihil rerum.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9947,
+                "product_id": 995,
+                "color": "DarkGreen",
+                "specification": "Accusantium totam ut perferendis omnis dicta qui accusamus incidunt. Praesentium voluptatem impedit omnis aut modi. Ut sit quisquam vel vel et.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9948,
+                "product_id": 995,
+                "color": "DimGrey",
+                "specification": "Culpa eum reprehenderit non ea a veritatis ut dolor. Quis ab molestiae unde voluptas quaerat. Iste inventore dolor harum alias quae rem est.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9949,
+                "product_id": 995,
+                "color": "BurlyWood",
+                "specification": "Ea a iste eaque et ipsa fugiat quos. Cum sequi iste unde ullam. Qui qui harum sed omnis pariatur.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9950,
+                "product_id": 995,
+                "color": "DarkOliveGreen",
+                "specification": "Neque molestiae corporis nisi consequatur deleniti dicta incidunt. Qui et labore provident et. Dolorem occaecati ut optio sunt nemo.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 996,
+        "name": "Katharina",
+        "brand": "Hodkiewicz, Doyle and Kris",
+        "type": "Cup",
+        "origin": "Ethiopia",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9951,
+                "product_id": 996,
+                "color": "Indigo",
+                "specification": "Quae nemo non velit et quisquam. Perspiciatis voluptates aut totam. Iste est maxime enim qui tenetur.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9952,
+                "product_id": 996,
+                "color": "DimGrey",
+                "specification": "Sit sint vero dolores libero inventore voluptate quam. Temporibus suscipit rerum alias est. Quia fuga maiores in dolorem animi sunt non illo.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9953,
+                "product_id": 996,
+                "color": "DarkBlue",
+                "specification": "Doloribus deleniti neque natus et beatae consequatur. Officiis perferendis culpa quam numquam error. Atque in eaque dolorem asperiores perspiciatis.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9954,
+                "product_id": 996,
+                "color": "DarkRed",
+                "specification": "Eum rerum dolorem quos sunt sed rem eos. Sequi optio tempora aliquam necessitatibus occaecati sed quaerat aliquid. Deserunt minima sunt quas nostrum quas quasi voluptatum necessitatibus.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9955,
+                "product_id": 996,
+                "color": "SteelBlue",
+                "specification": "Itaque est minima modi dolor est sequi. Dolores dolores magnam maiores quis eligendi. Facere assumenda et voluptatibus culpa et cumque.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9956,
+                "product_id": 996,
+                "color": "MidnightBlue",
+                "specification": "Molestias recusandae nobis totam voluptatum sed est temporibus. Velit mollitia dolorum perferendis architecto. Sequi at quaerat qui eaque.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9957,
+                "product_id": 996,
+                "color": "LightSeaGreen",
+                "specification": "Magnam et maxime qui facilis eveniet dolore quis. Dolorem nisi ut distinctio in. Voluptatem illum sit debitis inventore.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9958,
+                "product_id": 996,
+                "color": "BlanchedAlmond",
+                "specification": "Eveniet expedita dicta consequatur velit consequatur pariatur. Consequatur consequatur dolores et illum nesciunt libero non enim. Ipsam ut ullam aut delectus.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9959,
+                "product_id": 996,
+                "color": "DarkTurquoise",
+                "specification": "Autem sint delectus dolores id aut dolores eos. Dolores tenetur dolorem non enim rerum porro. Vitae repudiandae autem error et optio rem.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9960,
+                "product_id": 996,
+                "color": "FireBrick",
+                "specification": "Nostrum ut odit esse sapiente enim. Consequuntur illum sit alias excepturi impedit. Quis quas qui qui voluptatem quos voluptatem.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 997,
+        "name": "Erick",
+        "brand": "Johnston LLC",
+        "type": "Jug",
+        "origin": "Haiti",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9961,
+                "product_id": 997,
+                "color": "LavenderBlush",
+                "specification": "In aut unde in inventore repellendus. Esse voluptas qui blanditiis officia reprehenderit dolorem blanditiis est. Aspernatur ratione enim blanditiis eos corrupti totam.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9962,
+                "product_id": 997,
+                "color": "LightGray",
+                "specification": "Explicabo labore culpa atque velit laborum suscipit et. Voluptatem laborum aut excepturi quos. Doloribus dolor quaerat voluptates quibusdam.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9963,
+                "product_id": 997,
+                "color": "DimGray",
+                "specification": "Tempore deserunt ex sit repudiandae tempore vel rerum quas. Animi magnam quia veritatis non. Earum ipsum quia commodi.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9964,
+                "product_id": 997,
+                "color": "IndianRed",
+                "specification": "Fugiat blanditiis quibusdam sed sequi. Ex mollitia ex officia ut voluptas quasi fugit. Enim accusantium quas exercitationem modi eius et.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9965,
+                "product_id": 997,
+                "color": "Lime",
+                "specification": "Dolore perspiciatis iure vel voluptate est aliquid. Qui quasi quod quasi autem ullam asperiores voluptates. Earum perferendis dicta et dicta vel aliquid ad.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9966,
+                "product_id": 997,
+                "color": "DarkTurquoise",
+                "specification": "Et voluptate sed voluptas accusamus corporis. Accusantium voluptatem et delectus molestiae aut. Hic inventore culpa necessitatibus.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9967,
+                "product_id": 997,
+                "color": "LightGreen",
+                "specification": "Ut optio nostrum molestiae dolore. Quisquam reiciendis ex qui officia dolorem doloribus. Sint excepturi delectus delectus ut.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9968,
+                "product_id": 997,
+                "color": "OldLace",
+                "specification": "Non esse consequatur voluptatem temporibus id. Minus omnis ut fugit laboriosam asperiores. Eos inventore aspernatur quibusdam.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9969,
+                "product_id": 997,
+                "color": "GreenYellow",
+                "specification": "Est eius ducimus est earum nemo incidunt. Dolor saepe quos enim nobis aut. Ad et similique qui fugit.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9970,
+                "product_id": 997,
+                "color": "Khaki",
+                "specification": "Laudantium aut tempora impedit odit. Velit ut fuga sequi blanditiis. Error velit quia fuga asperiores.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 998,
+        "name": "Leone",
+        "brand": "Casper PLC",
+        "type": "Jug",
+        "origin": "Saint Lucia",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9971,
+                "product_id": 998,
+                "color": "MintCream",
+                "specification": "Perspiciatis quo ex labore quaerat autem ut eligendi dolores. Ullam totam est voluptas doloribus consequatur aperiam. Maiores molestiae fugit excepturi est in temporibus et.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9972,
+                "product_id": 998,
+                "color": "LightGoldenRodYellow",
+                "specification": "Adipisci est ut ea rerum hic tempore. Repellendus aut natus corporis eligendi. Dolor dolor quam explicabo.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9973,
+                "product_id": 998,
+                "color": "Purple",
+                "specification": "Atque quasi neque incidunt. Provident consequuntur doloremque esse aut quia. Provident est explicabo perferendis ut aut et quidem.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9974,
+                "product_id": 998,
+                "color": "MediumSeaGreen",
+                "specification": "Molestias dolores hic quia similique omnis laudantium provident. Occaecati nam voluptates quisquam sint. Iste doloremque necessitatibus exercitationem tempore ipsum consequatur impedit.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9975,
+                "product_id": 998,
+                "color": "DimGray",
+                "specification": "Illo et sapiente dolore autem consequatur. Sit voluptates ut delectus adipisci eum voluptas placeat. Laudantium nihil fuga non non quo molestiae consequatur.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9976,
+                "product_id": 998,
+                "color": "PowderBlue",
+                "specification": "Incidunt est aut quae deleniti cum placeat. Numquam dolorem beatae et unde omnis et. Architecto in dolores ut eos harum.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9977,
+                "product_id": 998,
+                "color": "Aqua",
+                "specification": "At ex molestiae asperiores vitae dignissimos possimus eos. Placeat fugit amet cumque quod. Et non sapiente vel.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9978,
+                "product_id": 998,
+                "color": "MediumOrchid",
+                "specification": "Esse dolore dolore et commodi esse. Sed quod eius impedit. Totam autem facere quo et voluptas.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9979,
+                "product_id": 998,
+                "color": "DarkMagenta",
+                "specification": "Itaque quas voluptatem et et. Sequi laudantium voluptatibus voluptas quas ipsum voluptatem eos voluptatibus. Ducimus libero voluptas quis qui dicta nulla sequi nihil.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9980,
+                "product_id": 998,
+                "color": "Thistle",
+                "specification": "Sequi ad fugiat doloremque ut. Rem officia est ipsum voluptatum rerum et blanditiis. Neque qui qui odio et sint similique similique.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 999,
+        "name": "Georgianna",
+        "brand": "Prohaska Ltd",
+        "type": "Plate",
+        "origin": "Cocos (Keeling) Islands",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9981,
+                "product_id": 999,
+                "color": "LightGreen",
+                "specification": "Qui voluptatem veritatis est laborum. Est corporis eligendi quia blanditiis similique quasi facere enim. Enim nihil soluta amet voluptates nisi sint aut.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9982,
+                "product_id": 999,
+                "color": "IndianRed",
+                "specification": "Iste porro vitae vero veniam et tenetur adipisci. Quis suscipit id in. Voluptatem voluptatem culpa non iure adipisci dolores.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9983,
+                "product_id": 999,
+                "color": "GhostWhite",
+                "specification": "Velit enim rerum unde voluptatem. Vitae occaecati quia nemo aut officia. Ex est impedit quaerat.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9984,
+                "product_id": 999,
+                "color": "MediumPurple",
+                "specification": "Hic et sint in dolorum. Repellat accusantium iure dolor sapiente minus et officia. Alias ut enim hic ullam earum quas.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9985,
+                "product_id": 999,
+                "color": "OliveDrab",
+                "specification": "Autem maiores repellat eaque occaecati. Eius quidem dolor repudiandae libero nisi. Sed dicta possimus deserunt praesentium.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9986,
+                "product_id": 999,
+                "color": "DarkBlue",
+                "specification": "Minus magni placeat amet pariatur velit. Et est et eum repellendus aut. Eius nisi quos aut a.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9987,
+                "product_id": 999,
+                "color": "OrangeRed",
+                "specification": "Voluptatem cupiditate mollitia nihil nemo nesciunt assumenda quia officiis. Enim quo quia labore et. Velit fugiat aut eligendi rerum et.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9988,
+                "product_id": 999,
+                "color": "DarkSlateBlue",
+                "specification": "Sed quos quibusdam quibusdam facilis est in delectus id. Officia excepturi assumenda et amet quasi vero. Quo aspernatur consequuntur iure unde iste ipsum.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9989,
+                "product_id": 999,
+                "color": "LightGray",
+                "specification": "Consectetur ullam adipisci necessitatibus fuga id. Aut iure dolorem autem eum. Temporibus voluptatem ipsum voluptas hic sit omnis.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9990,
+                "product_id": 999,
+                "color": "Linen",
+                "specification": "Impedit exercitationem fugiat consequuntur reiciendis repellat quae sit. Sequi similique accusamus est qui corporis. Ut vitae est saepe ut assumenda aut aut nostrum.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 1000,
+        "name": "Zackery",
+        "brand": "Mosciski PLC",
+        "type": "Glass",
+        "origin": "Holy See (Vatican City State)",
+        "created_at": "2024-06-03T15:14:00.000000Z",
+        "updated_at": "2024-06-03T15:14:00.000000Z",
+        "variants": [
+            {
+                "id": 9991,
+                "product_id": 1000,
+                "color": "Crimson",
+                "specification": "Molestias voluptatem ut est culpa consequuntur officiis veniam molestiae. Similique ea qui officia nam occaecati qui officia eligendi. Reiciendis ipsum tempore recusandae eaque voluptatem.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9992,
+                "product_id": 1000,
+                "color": "DarkOliveGreen",
+                "specification": "Dolore in dolorum et maxime. Odit ipsum corporis voluptatem expedita maxime. Et nobis fugit excepturi officiis sed est.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9993,
+                "product_id": 1000,
+                "color": "Lime",
+                "specification": "Quae quae quibusdam error fugit quis sunt itaque architecto. Ipsa quo voluptatem asperiores recusandae aliquid dolore ipsam. Libero dolorum occaecati itaque molestiae voluptas.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9994,
+                "product_id": 1000,
+                "color": "LawnGreen",
+                "specification": "Dolore omnis eius deleniti ipsa error vitae in natus. Autem sequi perferendis quis corrupti. Officiis eius hic distinctio dolorum rerum et et quo.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9995,
+                "product_id": 1000,
+                "color": "MediumSpringGreen",
+                "specification": "Deserunt suscipit amet deserunt sint molestiae amet. Officiis dicta corporis minus aspernatur excepturi. Velit praesentium sunt enim esse laudantium voluptatem atque.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9996,
+                "product_id": 1000,
+                "color": "Chartreuse",
+                "specification": "Debitis non vero sunt dolor possimus rem sequi. Autem consequatur nemo debitis ratione voluptas qui sapiente. Officia commodi maiores cum.",
+                "size": "large",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9997,
+                "product_id": 1000,
+                "color": "LightGray",
+                "specification": "Ut ut esse officiis ut eius tempore ipsa rerum. Quae laboriosam sit voluptatem sunt molestias voluptatum voluptate. Magni voluptas voluptatum sit ducimus maiores dolore.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9998,
+                "product_id": 1000,
+                "color": "Wheat",
+                "specification": "Dolor est et quae optio fugiat quia. Ipsum saepe impedit in quibusdam nihil. Molestias vitae placeat similique voluptas.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 9999,
+                "product_id": 1000,
+                "color": "PeachPuff",
+                "specification": "Vero aspernatur eaque laborum eaque ut. Dolor corrupti perferendis ullam architecto et. Et ea quos unde voluptas.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            },
+            {
+                "id": 10000,
+                "product_id": 1000,
+                "color": "CadetBlue",
+                "specification": "Id sint unde veniam accusamus sit deserunt error. Exercitationem aut sint laboriosam placeat ut voluptatem praesentium. Occaecati et et sequi animi ullam dolorem.",
+                "size": "small",
+                "created_at": "2024-06-03T15:14:00.000000Z",
+                "updated_at": "2024-06-03T15:14:00.000000Z"
+            }
+        ]
+    },
+    {
+        "id": 962,
+        "name": "Nash",
+        "brand": "Mohr-Reinger",
+        "type": "Plate",
+        "origin": "Macao",
+        "created_at": "2024-06-03T15:13:59.000000Z",
+        "updated_at": "2024-06-03T15:13:59.000000Z",
+        "variants": [
+            {
+                "id": 9611,
+                "product_id": 962,
+                "color": "Black",
+                "specification": "Assumenda ut fugiat voluptatibus excepturi ad. Est praesentium odio reprehenderit. Voluptates et similique ut incidunt consequatur fuga.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9612,
+                "product_id": 962,
+                "color": "RoyalBlue",
+                "specification": "Enim similique cum itaque in. Accusantium labore cumque hic rem. Ea nisi omnis sunt quisquam velit excepturi.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9613,
+                "product_id": 962,
+                "color": "PaleVioletRed",
+                "specification": "Cum occaecati cum beatae animi. Est aut et illum nesciunt at animi modi iure. Perferendis vel explicabo voluptatem facere.",
+                "size": "small",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9614,
+                "product_id": 962,
+                "color": "Chartreuse",
+                "specification": "Est reprehenderit et facere magnam velit. Est officiis sequi dolorem et consequatur. Sint recusandae delectus tempore accusamus.",
+                "size": "large",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9615,
+                "product_id": 962,
+                "color": "Beige",
+                "specification": "Earum repellat repellendus qui omnis voluptatem ipsam molestiae. Rerum aut reprehenderit vel mollitia. Nihil voluptatem molestias et non architecto quia at commodi.",
+                "size": "medium",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9616,
+                "product_id": 962,
+                "color": "Thistle",
+                "specification": "Molestiae at veniam magni aut harum. Magni rerum iure recusandae aut quod autem. Numquam et provident adipisci iusto.",
+                "size": "small",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9617,
+                "product_id": 962,
+                "color": "GoldenRod",
+                "specification": "Magni sed deserunt officia. Fugit et necessitatibus voluptatum eius provident eos. Voluptas nulla tenetur quae itaque deserunt omnis.",
+                "size": "small",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9618,
+                "product_id": 962,
+                "color": "Gold",
+                "specification": "Quae quis unde corrupti minima. Iste rerum consequuntur voluptatem voluptatem voluptatem nulla. Tempore fugit maiores quas et hic.",
+                "size": "small",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9619,
+                "product_id": 962,
+                "color": "LightSteelBlue",
+                "specification": "Enim tempore est quam tenetur atque iusto odit ipsa. Officia iste rerum cum iste qui. Doloremque in nihil consectetur atque ab voluptate quia soluta.",
+                "size": "large",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            },
+            {
+                "id": 9620,
+                "product_id": 962,
+                "color": "Lavender",
+                "specification": "Tempora at vero exercitationem consequatur perferendis sunt. Voluptatem atque consequatur voluptatem eaque officiis ut. Et dolore voluptas reiciendis voluptatem voluptatem et fugiat.",
+                "size": "small",
+                "created_at": "2024-06-03T15:13:59.000000Z",
+                "updated_at": "2024-06-03T15:13:59.000000Z"
+            }
+        ]
+    }
+]
