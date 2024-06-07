@@ -1,5 +1,43 @@
 [
     {
+        "id": 1003,
+        "name": "Product C",
+        "brand": "Brand X",
+        "type": "Mug",
+        "origin": "Country Z",
+        "created_at": "2024-06-06T08:56:23.000000Z",
+        "updated_at": "2024-06-06T08:56:23.000000Z",
+        "variants": [
+            {
+                "id": 10008,
+                "product_id": 1003,
+                "color": "Red",
+                "specification": "Specification 1",
+                "size": "large",
+                "created_at": "2024-06-06T08:56:23.000000Z",
+                "updated_at": "2024-06-06T08:56:23.000000Z"
+            },
+            {
+                "id": 10009,
+                "product_id": 1003,
+                "color": "Blue",
+                "specification": "Specification 2",
+                "size": "medium",
+                "created_at": "2024-06-06T08:56:23.000000Z",
+                "updated_at": "2024-06-06T08:56:23.000000Z"
+            },
+            {
+                "id": 10010,
+                "product_id": 1003,
+                "color": "Green",
+                "specification": "Specification 3",
+                "size": "small",
+                "created_at": "2024-06-06T08:56:23.000000Z",
+                "updated_at": "2024-06-06T08:56:23.000000Z"
+            }
+        ]
+    },
+    {
         "id": 992,
         "name": "Rusty",
         "brand": "Strosin-Kuhic",

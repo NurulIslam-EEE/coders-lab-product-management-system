@@ -1,27 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  modalOpen: false,
+  editData: null,
+  viewData: null,
 };
 
 export const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    setModalOpen: (state, action) => {
+      state.modalOpen = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    addEditData: (state, action) => {
+      state.editData = action.payload;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    addViewData: (state, action) => {
+      state.viewData = action.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } =
-  productsSlice.actions;
+export const { setModalOpen, addEditData, addViewData } = productsSlice.actions;
 
 export default productsSlice.reducer;

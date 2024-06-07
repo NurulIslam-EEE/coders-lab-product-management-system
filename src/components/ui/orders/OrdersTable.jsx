@@ -1,27 +1,10 @@
 import { Pagination } from "antd";
-import { useDispatch } from "react-redux";
-import {
-  addEditData,
-  addViewData,
-  setModalOpen,
-} from "../../redux/features/productsSlice";
 
-function CustomTable({ data, total }) {
-  // console.log("all", data);
-  const dispatch = useDispatch();
-  const handleEdit = (data) => {
-    // console.log("ttt", data);
-    dispatch(addEditData(data));
-    dispatch(setModalOpen(true));
-  };
-
-  const handleView = (data) => {
-    // console.log("ttt", data);
-    dispatch(addViewData(data));
-    dispatch(setModalOpen(true));
-  };
+function OrdersTable() {
+  const data = [];
   return (
     <div>
+      {" "}
       <table style={{ width: "100%", marginTop: "5px" }}>
         <thead className="table-head">
           <tr>
@@ -51,20 +34,9 @@ function CustomTable({ data, total }) {
                     justifyContent: "center",
                   }}
                 >
-                  <p
-                    onClick={() => handleView(item)}
-                    style={{ margin: "0 5px 0 0" }}
-                  >
-                    view
-                  </p>{" "}
-                  |{" "}
-                  <p
-                    onClick={() => handleEdit(item)}
-                    style={{ margin: "0 5px" }}
-                  >
-                    Edit
-                  </p>{" "}
-                  | <p style={{ margin: "0 0 0 5px" }}>Delete</p>
+                  <p style={{ margin: "0 5px 0 0" }}>view</p> |{" "}
+                  <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
+                  <p style={{ margin: "0 0 0 5px" }}>Delete</p>
                 </td>
               </tr>
             );
@@ -72,10 +44,10 @@ function CustomTable({ data, total }) {
         </tbody>
       </table>
       <div className="pagination-table">
-        <Pagination defaultCurrent={3} total={total} defaultPageSize={20} />
+        <Pagination defaultCurrent={3} total={50} defaultPageSize={10} />
       </div>
     </div>
   );
 }
 
-export default CustomTable;
+export default OrdersTable;
