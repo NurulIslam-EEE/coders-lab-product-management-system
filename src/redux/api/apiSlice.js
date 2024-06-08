@@ -8,11 +8,13 @@ export const api = createApi({
   tagTypes: ["orders", "products"],
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: (params = "") => `products?search=${params}`,
+      query: ({ search, pageNumber }) =>
+        `products?search=${search}&per_page=10&page=${pageNumber}`,
       providesTags: ["products"],
     }),
     getOrders: builder.query({
-      query: (params = "") => `orders?search=${params}`,
+      query: ({ search, pageNumber }) =>
+        `orders?search=${search}&per_page=10&page=${pageNumber}`,
       providesTags: ["orders"],
     }),
     postOrder: builder.mutation({

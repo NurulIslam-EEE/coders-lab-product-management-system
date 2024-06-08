@@ -4,8 +4,9 @@ import {
   useGetOrdersQuery,
   usePostOrderMutation,
 } from "../../../redux/api/apiSlice";
+import dateFormat, { masks } from "dateformat";
 
-function OrdersTable({ data }) {
+function OrdersTable({ data, setPageNumber }) {
   // const { data, error, isLoading } = useGetOrdersQuery();
 
   const [deleteOrder, result] = useDeleteOrderMutation();
@@ -17,6 +18,11 @@ function OrdersTable({ data }) {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const onChange = (pageNumber) => {
+    setPageNumber(pageNumber);
+    // console.log("Page: ", pageNumber);
   };
 
   // console.log("orderrr", result);
@@ -38,6 +44,8 @@ function OrdersTable({ data }) {
         </thead>
         <tbody className="table-body">
           {data?.data?.data?.map((item) => {
+            const now = new Date(item.created_at);
+            const finalDate = dateFormat(now, "dS mmmm, yyyy");
             return (
               <tr key={item.id}>
                 <td>{item.id}</td>
@@ -45,7 +53,7 @@ function OrdersTable({ data }) {
                 <td>{item.email}</td>
                 <td>{item.address}</td>
                 <td>{item.total_quantity}</td>
-                <td>{item.created_at.slice(0, 10)}</td>
+                <td>{finalDate}</td>
                 <td
                   style={{
                     color: "#c31600",
@@ -74,6 +82,7 @@ function OrdersTable({ data }) {
           defaultCurrent={1}
           total={data?.data?.total}
           defaultPageSize={10}
+          onChange={onChange}
         />
       </div>
     </div>

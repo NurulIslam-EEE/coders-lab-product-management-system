@@ -10,10 +10,14 @@ import { useState } from "react";
 
 function Products() {
   const [query, setQuery] = useState("");
-  const { data, isLoading, error } = useGetProductsQuery(query, {
-    refetchOnMountOrArgChange: true,
-    pollingInterval: 60000,
-  });
+  const [pageNumber, setPageNumber] = useState(1);
+  const { data, isLoading, error } = useGetProductsQuery(
+    { search: query, pageNumber: pageNumber },
+    {
+      refetchOnMountOrArgChange: true,
+      pollingInterval: 60000,
+    }
+  );
 
   const dispatch = useDispatch();
 
@@ -23,6 +27,9 @@ function Products() {
   };
 
   const handleChange = (e) => {
+    if (query) {
+      setPageNumber("");
+    }
     setQuery(e.target.value);
   };
 
@@ -39,7 +46,11 @@ function Products() {
 
         <CustomSearchBar onChange={handleChange} />
       </div>
-      <CustomTable data={data?.data?.data || []} total={data?.data?.total} />
+      <CustomTable
+        data={data?.data?.data || []}
+        total={data?.data?.total}
+        setPageNumber={setPageNumber}
+      />
 
       <CreateProductModal />
     </div>

@@ -9,13 +9,17 @@ import { useGetOrdersQuery } from "../redux/api/apiSlice";
 
 function Orders() {
   const [query, setQuery] = useState("");
+  const [pageNumber, setPageNumber] = useState(1);
   const [queryValue, setQuryValue] = useState("");
   const dispatch = useDispatch();
 
-  const { data } = useGetOrdersQuery(query, {
-    refetchOnMountOrArgChange: true,
-    pollingInterval: 60000,
-  });
+  const { data } = useGetOrdersQuery(
+    { search: query, pageNumber: pageNumber },
+    {
+      refetchOnMountOrArgChange: true,
+      pollingInterval: 60000,
+    }
+  );
 
   // name, { pollingInterval: 3000, skipPollingIfUnfocused: true,}
 
@@ -25,6 +29,9 @@ function Orders() {
   };
 
   const handleChange = (e) => {
+    if (query) {
+      setPageNumber("");
+    }
     setQuery(e.target.value);
   };
 
@@ -43,7 +50,7 @@ function Orders() {
 
         <CustomSearchBar onChange={handleChange} />
       </div>
-      <OrdersTable data={data} />
+      <OrdersTable data={data} setPageNumber={setPageNumber} />
       <OrderModal />
     </div>
   );

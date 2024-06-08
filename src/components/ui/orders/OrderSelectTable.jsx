@@ -16,10 +16,13 @@ function OrderSelectTable() {
   const dispatch = useDispatch();
   const selectedProduct = useSelector((state) => state.order.selectedProducts);
 
-  const { data, isLoading, error } = useGetProductsQuery(query, {
-    refetchOnMountOrArgChange: true,
-    pollingInterval: 60000,
-  });
+  const { data, isLoading, error } = useGetProductsQuery(
+    { search: query, pageNumber: "" },
+    {
+      refetchOnMountOrArgChange: true,
+      pollingInterval: 60000,
+    }
+  );
 
   const handleSelect = (product) => {
     dispatch(addSelectProduct(product));

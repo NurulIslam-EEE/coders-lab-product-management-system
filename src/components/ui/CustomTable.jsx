@@ -5,8 +5,9 @@ import {
   addViewData,
   setModalOpen,
 } from "../../redux/features/productsSlice";
+import dateFormat, { masks } from "dateformat";
 
-function CustomTable({ data, total }) {
+function CustomTable({ data, total, setPageNumber }) {
   // console.log("all", data);
   const dispatch = useDispatch();
   const handleEdit = (data) => {
@@ -19,6 +20,10 @@ function CustomTable({ data, total }) {
     // console.log("ttt", data);
     dispatch(addViewData(data));
     dispatch(setModalOpen(true));
+  };
+  const onChange = (pageNumber) => {
+    setPageNumber(pageNumber);
+    // console.log("Page: ", pageNumber);
   };
   return (
     <div>
@@ -35,13 +40,15 @@ function CustomTable({ data, total }) {
         </thead>
         <tbody className="table-body">
           {data?.map((item) => {
+            const now = new Date(item.created_at);
+            const finalDate = dateFormat(now, "dS mmmm, yyyy");
             return (
               <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.brand}</td>
                 <td>{item.type}</td>
-                <td>{item.created_at.slice(0, 10)}</td>
+                <td>{finalDate}</td>
                 <td
                   style={{
                     color: "#c31600",
@@ -72,7 +79,13 @@ function CustomTable({ data, total }) {
         </tbody>
       </table>
       <div className="pagination-table">
-        <Pagination defaultCurrent={3} total={total} defaultPageSize={20} />
+        <Pagination
+          defaultCurrent={1}
+          total={total}
+          defaultPageSize={20}
+          showSizeChanger={false}
+          onChange={onChange}
+        />
       </div>
     </div>
   );
