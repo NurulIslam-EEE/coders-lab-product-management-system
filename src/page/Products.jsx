@@ -25,7 +25,11 @@ function Products() {
   return (
     <div className="container">
       <div className="flex-between">
-        <CustomButton title="Create" onClick={handleClick} />
+        <CustomButton
+          title="Create"
+          style={{ padding: "3px 22px" }}
+          onClick={handleClick}
+        />
 
         <CustomSearchBar onChange={handleChange} />
       </div>

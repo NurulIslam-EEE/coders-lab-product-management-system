@@ -27,6 +27,10 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
 .text-center {
   text-align: center;
 }
@@ -52,6 +56,7 @@ a {
 .table-body tr td {
   text-align: center;
   padding: 5px 0;
+  min-width: 70px;
 }
 
 /* navigation */
@@ -91,6 +96,10 @@ a {
   padding: 5px;
   border-radius: 4px;
   text-align: center;
+}
+
+.ant-select-selector {
+  border: 0 !important;
 }
 
 /*

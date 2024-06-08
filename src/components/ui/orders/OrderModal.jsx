@@ -1,16 +1,19 @@
 import { Modal } from "antd";
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { openOrderModal } from "../../../redux/features/orderSlice";
 import OrderSelectTable from "./OrderSelectTable";
+import VariantsTable from "./VariantsTable";
+import OrderConfirmation from "./OrderConfirmation";
 
 function OrderModal() {
   const orderModal = useSelector((state) => state?.order?.orderModal);
+  const stepNo = useSelector((state) => state?.order?.stepNo);
   const dispatch = useDispatch();
 
   const handleClose = () => {
     dispatch(openOrderModal(false));
   };
+  // console.log("", stepNo);
   return (
     <div>
       <Modal
@@ -18,10 +21,12 @@ function OrderModal() {
         open={orderModal}
         onOk={() => dispatch(openOrderModal(true))}
         onCancel={handleClose}
-        width="90%"
+        width="fit-content"
         footer={null}
       >
-        <OrderSelectTable />
+        {stepNo === 1 && <OrderSelectTable />}
+        {stepNo === 2 && <VariantsTable />}
+        {stepNo === 3 && <OrderConfirmation />}
       </Modal>
     </div>
   );

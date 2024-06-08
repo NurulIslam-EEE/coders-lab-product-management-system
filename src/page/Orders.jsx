@@ -3,6 +3,7 @@ import CustomButton from "../components/ui/CustomButton";
 import CustomSearchBar from "../components/ui/CustomSearchBar";
 import { openOrderModal } from "../redux/features/orderSlice";
 import OrderModal from "../components/ui/orders/OrderModal";
+import OrdersTable from "../components/ui/orders/OrdersTable";
 
 function Orders() {
   const dispatch = useDispatch();
@@ -18,10 +19,15 @@ function Orders() {
   return (
     <div className="container">
       <div className="flex-between">
-        <CustomButton title="Create" onClick={handleCreate} />
+        <CustomButton
+          title="Create"
+          style={{ padding: "3px 22px" }}
+          onClick={handleCreate}
+        />
 
         <CustomSearchBar onChange={handleChange} />
       </div>
+      <OrdersTable />
       <OrderModal />
     </div>
   );
