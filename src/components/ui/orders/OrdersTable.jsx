@@ -5,8 +5,8 @@ import {
   usePostOrderMutation,
 } from "../../../redux/api/apiSlice";
 
-function OrdersTable() {
-  const { data, error, isLoading } = useGetOrdersQuery();
+function OrdersTable({ data }) {
+  // const { data, error, isLoading } = useGetOrdersQuery();
 
   const [deleteOrder, result] = useDeleteOrderMutation();
 
@@ -19,7 +19,7 @@ function OrdersTable() {
     }
   };
 
-  console.log("orderrr", result);
+  // console.log("orderrr", result);
 
   return (
     <div>

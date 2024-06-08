@@ -6,9 +6,15 @@ import CustomButton from "../components/ui/CustomButton";
 import { useDispatch } from "react-redux";
 import { setModalOpen } from "../redux/features/productsSlice";
 import { useGetProductsQuery } from "../redux/api/apiSlice";
+import { useState } from "react";
 
 function Products() {
-  const { data, isLoading, error } = useGetProductsQuery();
+  const [query, setQuery] = useState("");
+  const { data, isLoading, error } = useGetProductsQuery(query, {
+    refetchOnMountOrArgChange: true,
+    pollingInterval: 60000,
+  });
+
   const dispatch = useDispatch();
 
   const handleClick = () => {
@@ -17,13 +23,13 @@ function Products() {
   };
 
   const handleChange = (e) => {
-    console.log("clicked", e.target.value);
+    setQuery(e.target.value);
   };
 
   // console.log("rtk", data, data?.data?.total);
 
   return (
-    <div className="container">
+    <div className="container" style={{ paddingBottom: "20px" }}>
       <div className="flex-between">
         <CustomButton
           title="Create"

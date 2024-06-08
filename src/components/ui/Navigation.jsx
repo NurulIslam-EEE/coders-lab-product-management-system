@@ -1,7 +1,7 @@
-function Navigation() {
+function Navigation({ title }) {
   return (
     <div className="navigation-container">
-      <div className="header">Product</div>
+      <div className="header">{title}</div>
     </div>
   );
 }

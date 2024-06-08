@@ -9,12 +9,17 @@ import CustomSearchBar from "../CustomSearchBar";
 import CustomButton from "../CustomButton";
 import { CheckOutlined } from "@ant-design/icons";
 import { valueExists } from "../../../utils/utils";
+import { useState } from "react";
 
 function OrderSelectTable() {
+  const [query, setQuery] = useState("");
   const dispatch = useDispatch();
   const selectedProduct = useSelector((state) => state.order.selectedProducts);
 
-  const { data, isLoading, error } = useGetProductsQuery();
+  const { data, isLoading, error } = useGetProductsQuery(query, {
+    refetchOnMountOrArgChange: true,
+    pollingInterval: 60000,
+  });
 
   const handleSelect = (product) => {
     dispatch(addSelectProduct(product));
@@ -24,6 +29,10 @@ function OrderSelectTable() {
     dispatch(incDecStep(inc));
   };
 
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+  };
+
   // console.log("select", selectedProduct);
   return (
     <div>
@@ -31,7 +40,7 @@ function OrderSelectTable() {
       <h3 className="text-center">Order</h3>
       <h3 className="text-center">1-Select Product</h3>
       <div className="flex-end">
-        <CustomSearchBar />
+        <CustomSearchBar onChange={handleChange} />
       </div>
       <table style={{ width: "900px", marginTop: "5px" }}>
         <thead className="table-head">

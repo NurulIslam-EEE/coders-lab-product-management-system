@@ -5,13 +5,14 @@ export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://reactjr.coderslab.online/api/",
   }),
-  tagTypes: ["orders"],
+  tagTypes: ["orders", "products"],
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: () => `products`,
+      query: (params = "") => `products?search=${params}`,
+      providesTags: ["products"],
     }),
     getOrders: builder.query({
-      query: () => `orders`,
+      query: (params = "") => `orders?search=${params}`,
       providesTags: ["orders"],
     }),
     postOrder: builder.mutation({
