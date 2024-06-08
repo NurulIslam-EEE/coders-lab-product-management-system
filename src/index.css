@@ -1,9 +1,9 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* line-height: 1.5;
+  font-weight: 400; */
 
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   color: black;
 
   font-synthesis: none;
@@ -27,6 +27,11 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .flex-end {
   display: flex;
   justify-content: flex-end;
@@ -36,6 +41,9 @@ a {
 }
 .mr-5 {
   margin-right: 5px;
+}
+.h-100 {
+  height: 100%;
 }
 
 /* table  */
@@ -102,7 +110,49 @@ a {
   border: 0 !important;
 }
 
-/*
+.input-medium {
+  width: 230px;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 5px;
+  }
+}
+
+/* table */
+@media screen and (max-width: 1300px) {
+  .table-container {
+    overflow-x: scroll;
+  }
+}
+
+/* modal */
+/* modal */
+
+.ant-modal-content {
+  border-radius: 80px !important;
+  padding-bottom: 50px !important;
+  min-width: 800px;
+  min-height: 80vh;
+}
+.ant-modal-close {
+  right: 30px !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .ant-modal-content {
+    min-width: 90vw;
+  }
+}
+
+/*90
 a:hover {
   color: #535bf2;
 }

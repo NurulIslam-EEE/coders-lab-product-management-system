@@ -37,44 +37,48 @@ function OrderConfirmation() {
     }
   };
 
-  console.log("billing", billingInformation);
+  // console.log("billing", billingInformation);
   return (
-    <div>
+    <div className="h-100">
       <h3 className="text-center">Order Create</h3>
       <h3 className="text-center"> 3 - Information</h3>
-      <div>
-        <input
-          className="custom-input"
-          name="name"
-          type="text"
-          placeholder="Name"
-          onChange={handleChange}
-        />
-        <input
-          className="custom-input"
-          name="email"
-          type="email"
-          placeholder="Email"
-          onChange={handleChange}
-        />{" "}
-      </div>
+      <div className="flex-center h">
+        <div className="h-100">
+          <div>
+            <input
+              className="custom-input input-medium"
+              name="name"
+              type="text"
+              placeholder="Name"
+              onChange={handleChange}
+            />
+            <input
+              className="custom-input input-medium"
+              name="email"
+              type="email"
+              placeholder="Email"
+              onChange={handleChange}
+            />{" "}
+          </div>
 
-      <div>
-        <input
-          className="custom-input"
-          name="address"
-          type="text"
-          placeholder="Address"
-          onChange={handleChange}
-        />
-        <input
-          className="custom-input"
-          name="total"
-          type="number"
-          placeholder="Total Quantity"
-          disabled
-          value={billingInformation?.total_quantity}
-        />
+          <div>
+            <input
+              className="custom-input input-medium"
+              name="address"
+              type="text"
+              placeholder="Address"
+              onChange={handleChange}
+            />
+            <input
+              className="custom-input input-medium"
+              name="total"
+              type="number"
+              placeholder="Total Quantity"
+              disabled
+              value={billingInformation?.total_quantity}
+            />
+          </div>
+        </div>
       </div>
       <div className="flex-end">
         <CustomButton

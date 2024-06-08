@@ -6,6 +6,7 @@ import {
   setModalOpen,
 } from "../../redux/features/productsSlice";
 import dateFormat, { masks } from "dateformat";
+import ConfirmModal from "./shared/ConfirmModal";
 
 function CustomTable({ data, total, setPageNumber }) {
   // console.log("all", data);
@@ -25,59 +26,67 @@ function CustomTable({ data, total, setPageNumber }) {
     setPageNumber(pageNumber);
     // console.log("Page: ", pageNumber);
   };
+
+  // delete
+  const handleDelete = () => {};
   return (
     <div>
-      <table style={{ width: "100%", marginTop: "5px" }}>
-        <thead className="table-head">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Type</th>
-            <th>Create At</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody className="table-body">
-          {data?.map((item) => {
-            const now = new Date(item.created_at);
-            const finalDate = dateFormat(now, "dS mmmm, yyyy");
-            return (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.brand}</td>
-                <td>{item.type}</td>
-                <td>{finalDate}</td>
-                <td
-                  style={{
-                    color: "#c31600",
-                    cursor: "pointer",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <p
-                    onClick={() => handleView(item)}
-                    style={{ margin: "0 5px 0 0" }}
+      <div className="table-container">
+        <table style={{ marginTop: "5px" }} className="products-table">
+          <thead className="table-head">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Brand</th>
+              <th>Type</th>
+              <th>Create At</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody className="table-body">
+            {data?.map((item) => {
+              const now = new Date(item.created_at);
+              const finalDate = dateFormat(now, "dS mmmm, yyyy");
+              return (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>{item.brand}</td>
+                  <td>{item.type}</td>
+                  <td>{finalDate}</td>
+                  <td
+                    style={{
+                      color: "#c31600",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
-                    view
-                  </p>{" "}
-                  |{" "}
-                  <p
-                    onClick={() => handleEdit(item)}
-                    style={{ margin: "0 5px" }}
-                  >
-                    Edit
-                  </p>{" "}
-                  | <p style={{ margin: "0 0 0 5px" }}>Delete</p>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                    <p
+                      onClick={() => handleView(item)}
+                      style={{ margin: "0 5px 0 0" }}
+                    >
+                      view
+                    </p>{" "}
+                    |{" "}
+                    <p
+                      onClick={() => handleEdit(item)}
+                      style={{ margin: "0 5px" }}
+                    >
+                      Edit
+                    </p>{" "}
+                    |{" "}
+                    <p style={{ margin: "0 0 0 5px" }} onClick={handleDelete}>
+                      Delete
+                    </p>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
       <div className="pagination-table">
         <Pagination
           defaultCurrent={1}
@@ -87,6 +96,7 @@ function CustomTable({ data, total, setPageNumber }) {
           onChange={onChange}
         />
       </div>
+      <ConfirmModal />
     </div>
   );
 }

@@ -46,6 +46,7 @@ function Products() {
 
         <CustomSearchBar onChange={handleChange} />
       </div>
+
       <CustomTable
         data={data?.data?.data || []}
         total={data?.data?.total}

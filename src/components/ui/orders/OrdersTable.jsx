@@ -30,53 +30,55 @@ function OrdersTable({ data, setPageNumber }) {
   return (
     <div>
       {" "}
-      <table style={{ width: "100%", marginTop: "5px" }}>
-        <thead className="table-head">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Total Quantity</th>
-            <th>Create At</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody className="table-body">
-          {data?.data?.data?.map((item) => {
-            const now = new Date(item.created_at);
-            const finalDate = dateFormat(now, "dS mmmm, yyyy");
-            return (
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.email}</td>
-                <td>{item.address}</td>
-                <td>{item.total_quantity}</td>
-                <td>{finalDate}</td>
-                <td
-                  style={{
-                    color: "#c31600",
-                    cursor: "pointer",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <p style={{ margin: "0 5px 0 0" }}>view</p> |{" "}
-                  <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
-                  <p
-                    style={{ margin: "0 0 0 5px" }}
-                    onClick={() => handleDelete(item.id)}
+      <div className="table-container">
+        <table style={{ marginTop: "5px" }} className="products-table">
+          <thead className="table-head">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Total Quantity</th>
+              <th>Create At</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody className="table-body">
+            {data?.data?.data?.map((item) => {
+              const now = new Date(item.created_at);
+              const finalDate = dateFormat(now, "dS mmmm, yyyy");
+              return (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.name}</td>
+                  <td>{item.email}</td>
+                  <td>{item.address}</td>
+                  <td>{item.total_quantity}</td>
+                  <td>{finalDate}</td>
+                  <td
+                    style={{
+                      color: "#c31600",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
-                    Delete
-                  </p>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                    <p style={{ margin: "0 5px 0 0" }}>view</p> |{" "}
+                    <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
+                    <p
+                      style={{ margin: "0 0 0 5px" }}
+                      onClick={() => handleDelete(item.id)}
+                    >
+                      Delete
+                    </p>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
       <div className="pagination-table">
         <Pagination
           defaultCurrent={1}

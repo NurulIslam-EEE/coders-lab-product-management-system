@@ -29,10 +29,16 @@
   display: flex;
   justify-content: end;
 }
+.products-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-.ant-modal-content {
-  border-radius: 80px !important;
-  padding-bottom: 50px !important;
+@media screen and (max-width: 1000px) {
+  .products-table {
+    min-width: 1000px;
+    margin-bottom: 20px;
+  }
 }
 
 /* pagination */
@@ -52,4 +58,10 @@
 .ant-pagination-next {
   color: white !important;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-input {
+    width: 100%;
+  }
 }

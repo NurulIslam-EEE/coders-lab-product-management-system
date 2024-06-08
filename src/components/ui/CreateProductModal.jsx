@@ -7,11 +7,31 @@ import {
   addViewData,
   setModalOpen,
 } from "../../redux/features/productsSlice";
+import { valueExistsAnyField } from "../../utils/utils";
+import { CheckOutlined } from "@ant-design/icons";
+import { usePostProductMutation } from "../../redux/api/apiSlice";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 function CreateProductModal() {
   const modalOpen = useSelector((state) => state?.product?.modalOpen);
   const editData = useSelector((state) => state?.product?.editData);
   const viewData = useSelector((state) => state?.product?.viewData);
+  const variants = useSelector((state) => state?.product?.variants);
+
+  const notify = () => {
+    toast.error("Please fill up all field !", {
+      position: "top-right",
+    });
+  };
+  const notifySuccess = () => {
+    toast.success("Successfully product added", {
+      position: "top-right",
+    });
+  };
+
+  const [postProduct, result] = usePostProductMutation();
 
   const dispatch = useDispatch();
   const [productData, setProductData] = useState({
@@ -21,45 +41,15 @@ function CreateProductModal() {
     origin: "",
     variants: [],
   });
-  const [specification, setSpecification] = useState([
-    {
-      color: "",
-      specification: "",
-      size: "",
-    },
-    {
-      color: "",
-      specification: "",
-      size: "",
-    },
-    {
-      color: "",
-      specification: "",
-      size: "",
-    },
-    {
-      color: "",
-      specification: "",
-      size: "",
-    },
-  ]);
-  const handleAddSpecification = () => {
-    setSpecification((prev) => [
-      ...prev,
-      {
-        color: "",
-        specification: "",
-        size: "",
-      },
-    ]);
+  const [addVariants, setAddVariants] = useState([]);
+  const [showVariants, setShowVariants] = useState([]);
+  const handleAddSpecification = (data) => {
+    setAddVariants((prev) => [...prev, data]);
   };
 
-  const handleRemoveSpecification = (index) => {
-    if (specification.length < 2) {
-      return;
-    }
-    const filtered = specification.filter((sp, ind) => ind !== index);
-    setSpecification(filtered);
+  const handleRemoveSpecification = (id) => {
+    const filtered = addVariants.filter((sp, ind) => sp.variant_id !== id);
+    setAddVariants(filtered);
     // console.log(filtered);
   };
 
@@ -70,56 +60,92 @@ function CreateProductModal() {
   };
 
   const handleSpecification = (e, index) => {
-    setSpecification((prev) => {
-      return prev.map((obj, ind) => {
-        if (ind === index) {
-          return { ...obj, [e.target.name]: e.target.value };
-        }
-        return obj;
-      });
-    });
+    // setSpecification((prev) => {
+    //   return prev.map((obj, ind) => {
+    //     if (ind === index) {
+    //       return { ...obj, [e.target.name]: e.target.value };
+    //     }
+    //     return obj;
+    //   });
+    // });
   };
   useEffect(() => {
     if (editData) {
       setProductData(editData);
-      setSpecification(editData.variants);
+      setShowVariants(editData.variants);
     }
     if (viewData) {
       setProductData(viewData);
-      setSpecification(viewData.variants);
+      setShowVariants(viewData.variants);
     }
-  }, [editData, viewData]);
+    if (!editData && !viewData) {
+      setShowVariants(variants);
+    }
+  }, [editData, viewData, variants]);
 
   const handleClose = () => {
     dispatch(addEditData(null));
     dispatch(addViewData(null));
     dispatch(setModalOpen(false));
-    setSpecification([
-      {
-        color: "",
-        specification: "",
-        size: "",
-      },
-      {
-        color: "",
-        specification: "",
-        size: "",
-      },
-      {
-        color: "",
-        specification: "",
-        size: "",
-      },
-      {
-        color: "",
-        specification: "",
-        size: "",
-      },
-    ]);
+    // setSpecification([
+    //   {
+    //     color: "",
+    //     specification: "",
+    //     size: "",
+    //   },
+    //   {
+    //     color: "",
+    //     specification: "",
+    //     size: "",
+    //   },
+    //   {
+    //     color: "",
+    //     specification: "",
+    //     size: "",
+    //   },
+    //   {
+    //     color: "",
+    //     specification: "",
+    //     size: "",
+    //   },
+    // ]);
   };
-  //   console.log("modal", editData);
+
+  const handleSubmit = async () => {
+    if (
+      !productData.name ||
+      !productData.brand ||
+      !productData.type ||
+      !productData.origin ||
+      addVariants.length < 1
+    ) {
+      notify();
+
+      return;
+    }
+
+    try {
+      const finalData = { ...productData, variants: addVariants };
+      const res = await postProduct({ data: finalData });
+      if (res?.data?.message) {
+        notifySuccess();
+        setProductData({
+          name: "",
+          brand: "",
+          type: "",
+          origin: "",
+          variants: [],
+        });
+      }
+
+      console.log("final", res.data, res.error);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  // console.log("modal", addVariants);
   return (
-    <div>
+    <div className="customize-modal">
       <Modal
         centered
         open={modalOpen}
@@ -128,7 +154,7 @@ function CreateProductModal() {
         width="fit-content"
         footer={null}
       >
-        <h5 className="text-center">Product</h5>
+        <h3 className="text-center">Product</h3>
         <div className="top-input-container">
           <div>
             <input
@@ -169,7 +195,12 @@ function CreateProductModal() {
         </div>
 
         <h5 className="text-center">Variants</h5>
-        {specification.map((spec, ind) => {
+        {showVariants.map((spec, ind) => {
+          const exist = valueExistsAnyField(
+            addVariants,
+            "variant_id",
+            spec.variant_id
+          );
           return (
             <div key={ind}>
               <input
@@ -179,6 +210,7 @@ function CreateProductModal() {
                 placeholder="Color"
                 value={spec?.color}
                 onChange={(e) => handleSpecification(e, ind)}
+                disabled
               />
               <input
                 name="specification"
@@ -187,6 +219,7 @@ function CreateProductModal() {
                 placeholder="Specification"
                 value={spec?.specification}
                 onChange={(e) => handleSpecification(e, ind)}
+                disabled
               />
               <input
                 name="size"
@@ -195,27 +228,41 @@ function CreateProductModal() {
                 placeholder="Size"
                 value={spec?.size}
                 onChange={(e) => handleSpecification(e, ind)}
+                disabled
               />
-              <button
-                className="plus_minus mr-5 "
-                onClick={handleAddSpecification}
-              >
-                +
-              </button>
+              {exist ? (
+                <button className="plus_minus mr-5 ">
+                  <CheckOutlined style={{ fontSize: "8px", fontWeight: 800 }} />
+                </button>
+              ) : (
+                <button
+                  className="plus_minus mr-5 "
+                  onClick={() => handleAddSpecification(spec)}
+                >
+                  +
+                </button>
+              )}
               <button
                 className="plus_minus"
-                onClick={() => handleRemoveSpecification(ind)}
+                onClick={() => handleRemoveSpecification(spec.variant_id)}
               >
                 -
               </button>
             </div>
           );
         })}
-        <div className="buttons-container">
-          <CustomButton title="Cancel" styleName="mr-5" />
-          {!viewData && <CustomButton title="Submit" disabled={viewData} />}
-        </div>
+        {!viewData && (
+          <div className="buttons-container">
+            <CustomButton title="Cancel" styleName="mr-5" />
+            <CustomButton
+              title="Submit"
+              disabled={viewData}
+              onClick={handleSubmit}
+            />
+          </div>
+        )}
       </Modal>
+      <ToastContainer />
     </div>
   );
 }

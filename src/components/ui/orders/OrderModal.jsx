@@ -15,7 +15,7 @@ function OrderModal() {
   };
   // console.log("", stepNo);
   return (
-    <div>
+    <div className="order-modal">
       <Modal
         centered
         open={orderModal}
