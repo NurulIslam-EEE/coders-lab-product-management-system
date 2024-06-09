@@ -10,6 +10,7 @@ import { setConfirmModal } from "../../../redux/features/productsSlice";
 import { useDispatch } from "react-redux";
 import ConfirmModal from "../shared/ConfirmModal";
 import {
+  addEditOrder,
   addViewOrder,
   openOrderConfirmModal,
   openOrderModal,
@@ -44,6 +45,11 @@ function OrdersTable({ data, setPageNumber }) {
   };
   const handleViewOrder = (item) => {
     dispatch(addViewOrder(item));
+    dispatch(openOrderModal(true));
+  };
+
+  const handleEditOrder = (item) => {
+    dispatch(addEditOrder(item));
     dispatch(openOrderModal(true));
   };
 
@@ -92,7 +98,14 @@ function OrdersTable({ data, setPageNumber }) {
                     >
                       view
                     </p>{" "}
-                    | <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
+                    |{" "}
+                    <p
+                      style={{ margin: "0 5px" }}
+                      onClick={() => handleEditOrder(item)}
+                    >
+                      Edit
+                    </p>{" "}
+                    |{" "}
                     <p
                       style={{ margin: "0 0 0 5px" }}
                       onClick={() => handleOpenConfirm(item.id)}

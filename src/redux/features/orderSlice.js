@@ -6,6 +6,7 @@ const initialState = {
   editData: null,
   viewData: null,
   viewOrder: null,
+  editOrder: null,
   selectedProducts: [],
   variantsSelected: [],
   stepNo: 1,
@@ -30,6 +31,9 @@ export const productsSlice = createSlice({
     },
     addViewOrder: (state, action) => {
       state.viewOrder = action.payload;
+    },
+    addEditOrder: (state, action) => {
+      state.editOrder = action.payload;
     },
     addSelectProduct: (state, action) => {
       const existing = state.selectedProducts.find(
@@ -77,6 +81,7 @@ export const {
   openOrderConfirmModal,
   resetStepNo,
   addViewOrder,
+  addEditOrder,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;
