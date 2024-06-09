@@ -18,11 +18,11 @@ function OrdersTable({ data, setPageNumber }) {
   const [id, setId] = useState(null);
 
   // delete order
-  const handleOpenConfirm = (id) => {
-    setId(id);
+  const handleOpenConfirm = (id1) => {
+    setId(id1);
     dispatch(openOrderConfirmModal(true));
   };
-  const handleDeleteOrder = async (id) => {
+  const handleDeleteOrder = async () => {
     // console.log(id);
 
     try {
@@ -39,7 +39,7 @@ function OrdersTable({ data, setPageNumber }) {
     // console.log("Page: ", pageNumber);
   };
 
-  // console.log("orderrr", result);
+  console.log("orderrr", id);
 
   return (
     <div>
@@ -82,7 +82,7 @@ function OrdersTable({ data, setPageNumber }) {
                     <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
                     <p
                       style={{ margin: "0 0 0 5px" }}
-                      onClick={() => handleDeleteOrder(item.id)}
+                      onClick={() => handleOpenConfirm(item.id)}
                     >
                       Delete
                     </p>
@@ -101,7 +101,7 @@ function OrdersTable({ data, setPageNumber }) {
           onChange={onChange}
         />
       </div>
-      {/* <ConfirmModal handleDelete={handleDeleteOrder} /> */}
+      <ConfirmModal handleDelete={handleDeleteOrder} />
     </div>
   );
 }

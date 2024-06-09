@@ -15,7 +15,6 @@ import {
 } from "../../redux/api/apiSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
 
 function CreateProductModal() {
   const modalOpen = useSelector((state) => state?.product?.modalOpen);

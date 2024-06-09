@@ -25,7 +25,7 @@ export const productsSlice = createSlice({
       state.orderModal = action.payload;
     },
     openOrderConfirmModal: (state, action) => {
-      state.orderModal = action.payload;
+      state.orderConfirmModal = action.payload;
     },
     addSelectProduct: (state, action) => {
       const existing = state.selectedProducts.find(
@@ -48,6 +48,9 @@ export const productsSlice = createSlice({
         state.stepNo -= 1;
       }
     },
+    resetStepNo: (state) => {
+      state.stepNo = 1;
+    },
     updateBillingInformation: (state, action) => {
       console.log("redux", action);
       state.billingInformation = {
@@ -68,6 +71,7 @@ export const {
   updateBillingInformation,
   updateVariantsSelected,
   openOrderConfirmModal,
+  resetStepNo,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

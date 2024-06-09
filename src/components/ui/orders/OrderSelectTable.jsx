@@ -10,11 +10,18 @@ import CustomButton from "../CustomButton";
 import { CheckOutlined } from "@ant-design/icons";
 import { valueExists } from "../../../utils/utils";
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 function OrderSelectTable() {
   const [query, setQuery] = useState("");
   const dispatch = useDispatch();
   const selectedProduct = useSelector((state) => state.order.selectedProducts);
+
+  const notify = () => {
+    toast.error("Please select a product!", {
+      position: "top-right",
+    });
+  };
 
   const { data, isLoading, error } = useGetProductsQuery(
     { search: query, pageNumber: "" },
@@ -29,6 +36,10 @@ function OrderSelectTable() {
   };
 
   const handleStepNo = (inc) => {
+    if (selectedProduct.length < 1) {
+      notify();
+      return;
+    }
     dispatch(incDecStep(inc));
   };
 
@@ -40,8 +51,8 @@ function OrderSelectTable() {
   return (
     <div>
       {" "}
-      <h3 className="text-center">Order</h3>
-      <h3 className="text-center">1-Select Product</h3>
+      <h3 className="text-center">Order Create</h3>
+      <h3 className="text-center">1 - Select Product</h3>
       <div className="flex-end">
         <CustomSearchBar onChange={handleChange} />
       </div>

@@ -2,13 +2,21 @@ import CustomButton from "../CustomButton";
 import { useDispatch, useSelector } from "react-redux";
 import {
   incDecStep,
+  openOrderModal,
+  resetStepNo,
   updateBillingInformation,
 } from "../../../redux/features/orderSlice";
 import { usePostOrderMutation } from "../../../redux/api/apiSlice";
-import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
 function OrderConfirmation() {
   const dispatch = useDispatch();
+
+  const notify = () => {
+    toast.success("Successfully order created", {
+      position: "top-right",
+    });
+  };
 
   const [postOrder, result] = usePostOrderMutation();
 
@@ -30,8 +38,22 @@ function OrderConfirmation() {
       //   "https://reactjr.coderslab.online/api/orders",
       //   billingInformation
       // );
-      await postOrder({ data: billingInformation });
-      console.log("mutation", result);
+      const res = await postOrder({ data: billingInformation });
+      if (res?.data?.message) {
+        notify();
+        dispatch(
+          updateBillingInformation({
+            name: "",
+            email: "",
+            address: "",
+            total_quantity: 0,
+            details: [],
+          })
+        );
+        dispatch(resetStepNo());
+        dispatch(openOrderModal(false));
+      }
+      console.log("order confirm", res);
     } catch (err) {
       console.log(err);
     }

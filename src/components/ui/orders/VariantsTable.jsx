@@ -9,12 +9,18 @@ import {
 import { Select } from "antd";
 import { useEffect, useState } from "react";
 import { valueExistsAnyField } from "../../../utils/utils";
+import { toast, ToastContainer } from "react-toastify";
 
 function VariantsTable() {
   const [selectVariants, setSelectVariants] = useState([]);
   const [productFromDropDown, setProductFromDropDown] = useState({});
   // select
   const [selectOptions, setSelectOptions] = useState([]);
+  const notify = () => {
+    toast.error("Please select a variant!", {
+      position: "top-right",
+    });
+  };
 
   const variants = useSelector((state) => state.product.variants);
   const selectedProducts = useSelector((state) => state.order.selectedProducts);
@@ -25,6 +31,11 @@ function VariantsTable() {
       (accumulator, currentValue) => accumulator + currentValue.quantity,
       0
     );
+
+    if (selectVariants.length < 1) {
+      notify();
+      return;
+    }
 
     dispatch(updateBillingInformation({ name: "total_quantity", value: sum }));
     dispatch(updateVariantsSelected(selectVariants));
@@ -54,7 +65,7 @@ function VariantsTable() {
   const onChange = (value) => {
     const filtered = selectedProducts.filter((prod) => prod.id === value);
     setProductFromDropDown(filtered[0]);
-    console.log(filtered);
+    // console.log(filtered);
   };
   const onSearch = (value) => {
     console.log("search:", value);
@@ -76,8 +87,8 @@ function VariantsTable() {
   // console.log("ttt", selectedProducts);
   return (
     <div>
-      <h3 className="text-center">Order (Create)</h3>
-      <h3 className="text-center">2- Select Variants</h3>
+      <h3 className="text-center">Order Create</h3>
+      <h3 className="text-center">2 - Select Variants</h3>
       {/* previous  */}
       <Select
         showSearch
