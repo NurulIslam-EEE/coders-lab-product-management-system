@@ -6,7 +6,7 @@
 
 ## Table Of Content
 
-- [Key Features](#Key-gfeatures)
+- [Key Features](#key-features)
 - [How to Install](#how-to-install)
 - [Getting Started](#getting-started)
 - [Built With](#built-ith)
