@@ -5,6 +5,7 @@ const initialState = {
   orderConfirmModal: false,
   editData: null,
   viewData: null,
+  viewOrder: null,
   selectedProducts: [],
   variantsSelected: [],
   stepNo: 1,
@@ -26,6 +27,9 @@ export const productsSlice = createSlice({
     },
     openOrderConfirmModal: (state, action) => {
       state.orderConfirmModal = action.payload;
+    },
+    addViewOrder: (state, action) => {
+      state.viewOrder = action.payload;
     },
     addSelectProduct: (state, action) => {
       const existing = state.selectedProducts.find(
@@ -72,6 +76,7 @@ export const {
   updateVariantsSelected,
   openOrderConfirmModal,
   resetStepNo,
+  addViewOrder,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

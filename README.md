@@ -1,6 +1,9 @@
 # Product Management System
 
-## How to Install and Run the Project
+## How to Install
+
+- Clone the project
+- run `npm run install`
 
 ## Getting Started
 
@@ -25,3 +28,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [Redux](https://redux-toolkit.js.org/) - The official, opinionated, batteries-included toolset for efficient Redux development
 
 ## How to Use the Project
+
+### Create product
+
+-
+-
+-
+-
+
+### Create Order
+
+-
+-
+-
+-

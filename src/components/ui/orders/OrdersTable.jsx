@@ -9,7 +9,11 @@ import { useState } from "react";
 import { setConfirmModal } from "../../../redux/features/productsSlice";
 import { useDispatch } from "react-redux";
 import ConfirmModal from "../shared/ConfirmModal";
-import { openOrderConfirmModal } from "../../../redux/features/orderSlice";
+import {
+  addViewOrder,
+  openOrderConfirmModal,
+  openOrderModal,
+} from "../../../redux/features/orderSlice";
 
 function OrdersTable({ data, setPageNumber }) {
   // const { data, error, isLoading } = useGetOrdersQuery();
@@ -37,6 +41,10 @@ function OrdersTable({ data, setPageNumber }) {
   const onChange = (pageNumber) => {
     setPageNumber(pageNumber);
     // console.log("Page: ", pageNumber);
+  };
+  const handleViewOrder = (item) => {
+    dispatch(addViewOrder(item));
+    dispatch(openOrderModal(true));
   };
 
   console.log("orderrr", id);
@@ -78,8 +86,13 @@ function OrdersTable({ data, setPageNumber }) {
                       justifyContent: "center",
                     }}
                   >
-                    <p style={{ margin: "0 5px 0 0" }}>view</p> |{" "}
-                    <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
+                    <p
+                      style={{ margin: "0 5px 0 0" }}
+                      onClick={() => handleViewOrder(item)}
+                    >
+                      view
+                    </p>{" "}
+                    | <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
                     <p
                       style={{ margin: "0 0 0 5px" }}
                       onClick={() => handleOpenConfirm(item.id)}
