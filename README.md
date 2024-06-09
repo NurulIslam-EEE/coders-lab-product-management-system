@@ -6,14 +6,10 @@
 
 ## Table Of Content
 
-- [How to Install](#installation)
-  - [Composer](#composer)
-  - [Getting Started](#ddev)
-  - [Built With](#ter-extension)
-- [How to Use the Project](#typo3-setup)
-
-- [License](#license)
-- [Links](#links)
+- [How to Install](#how-to-install)
+  - [Getting Started](#getting-started)
+  - [Built With](#built-ith)
+- [How to Use the Project](#how-to-use-the-project)
 
 ## How to Install
 
