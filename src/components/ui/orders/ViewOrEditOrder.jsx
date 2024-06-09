@@ -148,6 +148,7 @@ function ViewOrEditOrder() {
         </div>
       </div>
 
+      <h3 className="text-center">Variants </h3>
       {/* variants */}
       {orderData?.details?.map((spec, ind) => {
         const exist = valueExistsAnyField(
