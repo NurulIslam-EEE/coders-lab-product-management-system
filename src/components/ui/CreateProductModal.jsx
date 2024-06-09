@@ -9,7 +9,10 @@ import {
 } from "../../redux/features/productsSlice";
 import { valueExistsAnyField } from "../../utils/utils";
 import { CheckOutlined } from "@ant-design/icons";
-import { usePostProductMutation } from "../../redux/api/apiSlice";
+import {
+  usePostProductMutation,
+  useUpdateProductMutation,
+} from "../../redux/api/apiSlice";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -25,13 +28,14 @@ function CreateProductModal() {
       position: "top-right",
     });
   };
-  const notifySuccess = () => {
-    toast.success("Successfully product added", {
+  const notifySuccess = (message) => {
+    toast.success(message, {
       position: "top-right",
     });
   };
 
   const [postProduct, result] = usePostProductMutation();
+  const [updateProduct, result2] = useUpdateProductMutation();
 
   const dispatch = useDispatch();
   const [productData, setProductData] = useState({
@@ -73,6 +77,7 @@ function CreateProductModal() {
     if (editData) {
       setProductData(editData);
       setShowVariants(editData.variants);
+      setAddVariants(editData.variants);
     }
     if (viewData) {
       setProductData(viewData);
@@ -87,28 +92,6 @@ function CreateProductModal() {
     dispatch(addEditData(null));
     dispatch(addViewData(null));
     dispatch(setModalOpen(false));
-    // setSpecification([
-    //   {
-    //     color: "",
-    //     specification: "",
-    //     size: "",
-    //   },
-    //   {
-    //     color: "",
-    //     specification: "",
-    //     size: "",
-    //   },
-    //   {
-    //     color: "",
-    //     specification: "",
-    //     size: "",
-    //   },
-    //   {
-    //     color: "",
-    //     specification: "",
-    //     size: "",
-    //   },
-    // ]);
   };
 
   const handleSubmit = async () => {
@@ -125,25 +108,46 @@ function CreateProductModal() {
     }
 
     try {
-      const finalData = { ...productData, variants: addVariants };
-      const res = await postProduct({ data: finalData });
-      if (res?.data?.message) {
-        notifySuccess();
-        setProductData({
-          name: "",
-          brand: "",
-          type: "",
-          origin: "",
-          variants: [],
-        });
+      let finalData = { ...productData, variants: addVariants };
+      let res = null;
+      if (editData) {
+        finalData = { ...finalData, _method: "PUT" };
+        res = await updateProduct({ data: finalData, id: finalData.id });
+        console.log("from edit data");
+        if (res?.data?.message) {
+          notifySuccess("Successfully product updated");
+          setProductData({
+            name: "",
+            brand: "",
+            type: "",
+            origin: "",
+            variants: [],
+          });
+          setAddVariants([]);
+          dispatch(addEditData(null));
+          dispatch(setModalOpen(false));
+        }
+      } else {
+        res = await postProduct({ data: finalData });
+        if (res?.data?.message) {
+          notifySuccess("Successfully product added");
+          setProductData({
+            name: "",
+            brand: "",
+            type: "",
+            origin: "",
+            variants: [],
+          });
+          setAddVariants([]);
+        }
       }
 
-      console.log("final", res.data, res.error);
+      console.log("final", res.data, res.error, res, finalData);
     } catch (err) {
       console.log(err);
     }
   };
-  // console.log("modal", addVariants);
+  console.log("modal", addVariants, productData);
   return (
     <div className="customize-modal">
       <Modal
@@ -196,11 +200,7 @@ function CreateProductModal() {
 
         <h5 className="text-center">Variants</h5>
         {showVariants.map((spec, ind) => {
-          const exist = valueExistsAnyField(
-            addVariants,
-            "variant_id",
-            spec.variant_id
-          );
+          const exist = valueExistsAnyField(addVariants, "id", spec.id);
           return (
             <div key={ind}>
               <input
@@ -253,7 +253,11 @@ function CreateProductModal() {
         })}
         {!viewData && (
           <div className="buttons-container">
-            <CustomButton title="Cancel" styleName="mr-5" />
+            <CustomButton
+              title="Cancel"
+              styleName="mr-5"
+              onClick={handleClose}
+            />
             <CustomButton
               title="Submit"
               disabled={viewData}

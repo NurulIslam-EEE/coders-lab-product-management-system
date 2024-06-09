@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   orderModal: false,
+  orderConfirmModal: false,
   editData: null,
   viewData: null,
   selectedProducts: [],
@@ -21,6 +22,9 @@ export const productsSlice = createSlice({
   initialState,
   reducers: {
     openOrderModal: (state, action) => {
+      state.orderModal = action.payload;
+    },
+    openOrderConfirmModal: (state, action) => {
       state.orderModal = action.payload;
     },
     addSelectProduct: (state, action) => {
@@ -63,6 +67,7 @@ export const {
   incDecStep,
   updateBillingInformation,
   updateVariantsSelected,
+  openOrderConfirmModal,
 } = productsSlice.actions;
 
 export default productsSlice.reducer;

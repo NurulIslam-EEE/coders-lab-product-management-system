@@ -5,16 +5,30 @@ import {
   usePostOrderMutation,
 } from "../../../redux/api/apiSlice";
 import dateFormat, { masks } from "dateformat";
+import { useState } from "react";
+import { setConfirmModal } from "../../../redux/features/productsSlice";
+import { useDispatch } from "react-redux";
+import ConfirmModal from "../shared/ConfirmModal";
+import { openOrderConfirmModal } from "../../../redux/features/orderSlice";
 
 function OrdersTable({ data, setPageNumber }) {
   // const { data, error, isLoading } = useGetOrdersQuery();
-
+  const dispatch = useDispatch();
   const [deleteOrder, result] = useDeleteOrderMutation();
+  const [id, setId] = useState(null);
 
-  const handleDelete = async (id) => {
-    console.log(id);
+  // delete order
+  const handleOpenConfirm = (id) => {
+    setId(id);
+    dispatch(openOrderConfirmModal(true));
+  };
+  const handleDeleteOrder = async (id) => {
+    // console.log(id);
+
     try {
-      await deleteOrder(id);
+      const res = await deleteOrder(id);
+      dispatch(openOrderConfirmModal(false));
+      console.log("delete order", res);
     } catch (err) {
       console.log(err);
     }
@@ -68,7 +82,7 @@ function OrdersTable({ data, setPageNumber }) {
                     <p style={{ margin: "0 5px" }}>Edit</p> |{" "}
                     <p
                       style={{ margin: "0 0 0 5px" }}
-                      onClick={() => handleDelete(item.id)}
+                      onClick={() => handleDeleteOrder(item.id)}
                     >
                       Delete
                     </p>
@@ -87,6 +101,7 @@ function OrdersTable({ data, setPageNumber }) {
           onChange={onChange}
         />
       </div>
+      {/* <ConfirmModal handleDelete={handleDeleteOrder} /> */}
     </div>
   );
 }

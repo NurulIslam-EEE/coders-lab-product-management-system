@@ -1,16 +1,25 @@
-import { Pagination } from "antd";
+import { Modal, Pagination } from "antd";
 import { useDispatch } from "react-redux";
 import {
   addEditData,
   addViewData,
+  setConfirmModal,
   setModalOpen,
 } from "../../redux/features/productsSlice";
 import dateFormat, { masks } from "dateformat";
+
 import ConfirmModal from "./shared/ConfirmModal";
+import { useState } from "react";
+import { useDeleteProductMutation } from "../../redux/api/apiSlice";
+import ConfirmModal2 from "./shared/ConfirmModal2";
 
 function CustomTable({ data, total, setPageNumber }) {
   // console.log("all", data);
+  const [id, setId] = useState(null);
   const dispatch = useDispatch();
+
+  const [deleteProduct, result] = useDeleteProductMutation();
+
   const handleEdit = (data) => {
     // console.log("ttt", data);
     dispatch(addEditData(data));
@@ -28,7 +37,20 @@ function CustomTable({ data, total, setPageNumber }) {
   };
 
   // delete
-  const handleDelete = () => {};
+  const handleDeleteProd = async () => {
+    try {
+      const res = await deleteProduct(id);
+      dispatch(setConfirmModal(false));
+      console.log("deleeeee", res.data, res.error, result);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleOpenConfirm = (id) => {
+    setId(id);
+    dispatch(setConfirmModal(true));
+  };
   return (
     <div>
       <div className="table-container">
@@ -77,7 +99,10 @@ function CustomTable({ data, total, setPageNumber }) {
                       Edit
                     </p>{" "}
                     |{" "}
-                    <p style={{ margin: "0 0 0 5px" }} onClick={handleDelete}>
+                    <p
+                      style={{ margin: "0 0 0 5px" }}
+                      onClick={() => handleOpenConfirm(item.id)}
+                    >
                       Delete
                     </p>
                   </td>
@@ -96,7 +121,7 @@ function CustomTable({ data, total, setPageNumber }) {
           onChange={onChange}
         />
       </div>
-      <ConfirmModal />
+      <ConfirmModal2 handleDeleteProd={handleDeleteProd} />
     </div>
   );
 }

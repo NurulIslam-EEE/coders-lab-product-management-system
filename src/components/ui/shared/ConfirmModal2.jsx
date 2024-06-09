@@ -1,15 +1,15 @@
-import { Modal } from "antd";
+import { Button, Modal } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { openOrderConfirmModal } from "../../../redux/features/orderSlice";
-const ConfirmModal = ({ handleDelete }) => {
-  const isModal = useSelector((state) => state.order.orderConfirmModal);
+import { setConfirmModal } from "../../../redux/features/productsSlice";
+const ConfirmModal2 = ({ handleDeleteProd }) => {
+  const isModal = useSelector((state) => state.product.confirmModal);
   const dispatch = useDispatch();
 
   const handleOk = async () => {
-    handleDelete();
+    handleDeleteProd();
   };
   const handleCancel = () => {
-    dispatch(openOrderConfirmModal(false));
+    dispatch(setConfirmModal(false));
   };
   return (
     <>
@@ -24,4 +24,4 @@ const ConfirmModal = ({ handleDelete }) => {
     </>
   );
 };
-export default ConfirmModal;
+export default ConfirmModal2;
