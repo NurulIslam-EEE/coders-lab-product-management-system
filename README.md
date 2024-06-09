@@ -6,21 +6,42 @@
 
 ## Table Of Content
 
+- [Key Features](#Key-gfeatures)
 - [How to Install](#how-to-install)
-  - [Getting Started](#getting-started)
-  - [Built With](#built-ith)
+- [Getting Started](#getting-started)
+- [Built With](#built-ith)
 - [How to Use the Project](#how-to-use-the-project)
+
+## Key Features
+
+- Products and orders table view.
+- Products and orders create functionality.
+- Products and orders search functionality.
+- Products and orders edit functionality.
+- Products and orders details view.
 
 ## How to Install
 
-- Clone the project
-- run `npm run install`
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/NurulIslam-EEE/coders-lab-product-management-system
+
+# Go into the repository
+$ cd coders-lab-product-management-system
+
+# Install dependencies
+$ npm install
+
+```
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+# Run the app
 npm run dev
 # or
 yarn dev
@@ -37,6 +58,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [React](https://react.dev/) - The library for web and native user interfaces
 - [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 - [Redux Toolkit](https://redux-toolkit.js.org/) - The official, opinionated, batteries-included toolset for efficient Redux development
+- [Ant Design](https://ant.design/) - Help designers/developers building beautiful products more flexible and working with happiness
 
 ## How to Use the Project
 
